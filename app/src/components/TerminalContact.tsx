@@ -11,7 +11,7 @@ const TerminalContact: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    inputRef.current?.focus();
+    inputRef.current?.focus({ preventScroll: true });
   }, [step]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -124,7 +124,6 @@ const TerminalContact: React.FC = () => {
               onKeyDown={handleKeyDown}
               className="bg-transparent border-none outline-none flex-1 text-white caret-primary"
               spellCheck={false}
-              autoFocus
             />
           </div>
         )}
