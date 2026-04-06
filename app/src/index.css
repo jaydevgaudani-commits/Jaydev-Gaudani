@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 8 8 8;
+  --surface: 19 19 19;
+  --surface-low: 28 27 27;
+  --primary: 0 242 255;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white selection:bg-primary/30;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .liquid-glass {
+    @apply backdrop-blur-[40px] border border-white/10 relative overflow-hidden;
+  }
+  
+  .no-line-section {
+    @apply border-none;
+  }
+  
+  .bento-grid {
+    @apply grid gap-4 p-4;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* Custom WebGL Overlay Styling */
+#liquid-overlay {
+  pointer-events: none;
+  background: transparent;
+}
+
+/* Typography Overrides */
+h1, h2, h3, .heading-display {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+code, .mono-data {
+  font-family: 'JetBrains Mono', monospace;
+}
