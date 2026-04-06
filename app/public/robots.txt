@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://jaydevgaudani.com/sitemap.xml
+Sitemap: https://jaydev-gaudani.vercel.app/sitemap.xml
